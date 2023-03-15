@@ -13,12 +13,13 @@ try:
         print ("Input int in [0, 255]: ")
         val = input ()
 
+        if (val[0] == 'q'):
+            break
         try:
-            val = int (val)
+            val = float (val)
         except ValueError:
             print ("Input is not numerical")
             continue
-
         if (int (val) != float (val)):
             print ("float number got")
             continue
@@ -28,6 +29,8 @@ try:
         elif (int (val) > 255):
             print ("Number exceeds set limits towards up")
             continue
+
+        val = int (val)
 
         print ("Expected voltage : " + str (val / 255 * 3.3) + " Volts")
         gpio.output (dac, dec2bin (val))
