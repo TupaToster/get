@@ -1,0 +1,4 @@
+Total time: 68.66652941703796
+One measurement avg time: 0.08116611042203069
+Discretization freq: 12.320412975321936
+Quantovanie step adc: 0.012890625
