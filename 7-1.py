@@ -63,7 +63,7 @@ finally:
     x = np.linspace (0, expTime, len (values))
 
     plt.grid ()
-    plt.plot (x, values, ".b")
+    plt.plot (x, np.array (values) * cf, ".b")
     plt.show ()
 
     gpio.output (dac, gpio.LOW)
